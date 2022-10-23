@@ -19,7 +19,7 @@ deploy:
   region: us-west-2
   app: mycicdapp
   env: mycicdenv
-  bucket_name: mysitecicd12-bucket
+  bucket_name: mycicdbucket1289
   on:
     all_branches: true
 
