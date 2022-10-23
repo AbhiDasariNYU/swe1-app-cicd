@@ -1,0 +1,12 @@
+language: python
+python:
+  - 3.7.9
+install:
+  - pip install -r requirements.txt
+before_script:
+  - python manage.py migrate
+script:
+  - black --check .
+  - flake8 .
+after_script:
+  - coveralls
