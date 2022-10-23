@@ -10,3 +10,13 @@ script:
   - flake8 .
 after_script:
   - coveralls
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: "AKIA5KPGKBUHHHBLV5CC"
+  secret_access_key: "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"
+  region: "us-east-1"
+  app: "mycicdapp"
+  env: "mycicdenv"
+  bucket_name: "mysitecicd12-bucket"
+  on:
+    all_branches: true
